@@ -4,10 +4,10 @@ import { FaBars, FaTimes } from 'react-icons/fa' // Substituir os ícones da bib
 import logoDojo from './../../assets/logoDojo.png'
 
 const navigation = [
-  { name: 'Home', href: '#' },
+  { name: 'Home', href: '/' },
   { name: 'Nossos planos', href: 'https://dojopaulista.actuar.com/Assinaturas' },
-  { name: 'Loja', href: '#' },
-  { name: 'Sobre nós', href: 'https://dojopaulista.actuar.com/fale-conoscov2' },
+  { name: 'Loja', href: '/loja' },
+  { name: 'Sobre nós', href: '/sobre-nos' },
   { name: 'Fale conosco', href: 'https://dojopaulista.actuar.com/fale-conoscov2' },
 ]
 

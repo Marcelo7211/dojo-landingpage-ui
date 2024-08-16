@@ -1,13 +1,12 @@
-import { animated, useSpring } from '@react-spring/web'
+import { animated, useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer'; // Importe useInView
-import './App.css'
-import Footer from './components/footer/footer'
-import Header from './components/header/header'
-import Beneficios from './components/home/beneficios'
-import Home from './components/home/home'
-import SessaoEfeito_1 from './components/home/sessaoEfeito_1'
-import NossosServicos from './components/home/nossosServicos';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Footer from './components/footer/footer';
+import Header from './components/header/header';
+import HomePage from './Pages/homePage';
+import Shop from './Pages/shop';
+import Sobre from './Pages/sobre';
 
 
 function App() {
@@ -27,10 +26,13 @@ function App() {
   return (
     <div className="bg-white" >
       <Header />
-      <Home />
-      <Beneficios />
-      <SessaoEfeito_1 />
-      <NossosServicos />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/loja" element={<Shop />} />
+          <Route path="/sobre-nos" element={<Sobre />} />
+        </ Routes>
+      </BrowserRouter>
       <animated.div style={fadePropsHeader} ref={ref}>
         <Footer />
       </animated.div>
