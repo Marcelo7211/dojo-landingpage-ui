@@ -57,7 +57,6 @@ export default function Equipe() {
                         </div>
                     ))}
                 </div>
-
                 <div className="text-2xl text-center mx-11 my-12">
                     <p>Cada integrante da equipe desempenha um papel essencial para que o dojo alcance o sucesso nas competições, compartilhando sua paixão e experiência com todos os alunos.</p>
                 </div>
