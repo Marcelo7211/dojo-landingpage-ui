@@ -1,4 +1,13 @@
+import SimpleSlider from "../components/home/slider";
+
 export default function Shop() {
+    const listCat: any = [
+        { id: 1, title: "Kimonos", href: "https://dojopaulista.actuar.com/Kimonos#/" },
+        { id: 2, title: "Faixas", href: "https://dojopaulista.actuar.com/faixas#/"},
+        { id: 3, title: "Luvas e Caneleiras", href: "https://dojopaulista.actuar.com/luvas-e-caneleiras#/"},
+        { id: 4, title: "Proteções", href: "https://dojopaulista.actuar.com/protetores#/"},
+    ]
+
     return (
         <div className="isolate px-6 lg:px-8 mt-16">
             <div
@@ -31,6 +40,24 @@ export default function Shop() {
                     }}
                     className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
                 />
+            </div>
+
+            <SimpleSlider />
+
+            <div className="mx-auto my-6 max-w-6xl py-10 sm:py-10 lg:py-10">
+                <div className="text-center">
+                    <h1 className=" font-bold tracking-tight text-gray-900 sm:text-3xl">
+                        Acesse por categoria
+                    </h1>
+                </div>
+
+                <div className="flex flex-wrap justify-center">
+                    {listCat.map((item: any) => (
+                        <a key={item.id} href={item.href} className="mx-6 mt-7 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-2xl w-60 h-60 flex items-center justify-center">
+                            <h1 className="text-2xl">{item.title}</h1> 
+                        </a>
+                    ))}
+                </div>
             </div>
         </div>
     )
