@@ -64,10 +64,10 @@ export default function SimpleSlider() {
             { id: 7, banner:Kimono4, titulo: "Kimono infaltil" },
             { id: 8, banner:LuvaAoShiroi, titulo: "Luva Ao Shiroi" },
             { id: 9, banner:LuvaAkaShiroi, titulo: "Luva Aka Shiroi" },
-            { id: 10, banner:ProtetorTorax, titulo: "Protetor de Torax Masculino" },
-            { id: 11, banner:ProtetorBocal, titulo: "Protetor Bocal" },
+            { id: 10, banner:ProtetorTorax, titulo: "Torax" },
+            { id: 11, banner:ProtetorBocal, titulo: "Bocal" },
             { id: 12, banner:Coquilha, titulo: "Coquilha" },
-            { id: 13, banner:CoquilhaSimples, titulo: "Coquilha simples" },
+            { id: 13, banner:CoquilhaSimples, titulo: "Coquilha" },
         
         ];
     
@@ -122,8 +122,10 @@ export default function SimpleSlider() {
           <div key={item.id}>
             <div className="relative">
               <img src={item.banner} alt="Featured" className="w-full object-cover" />
-              <div className="absolute bottom-2 left-8">
-                <h1 className="text-2xl font-bold">{item.titulo}</h1>
+              <div className="absolute bottom-8 left-8">
+                <div className="flex space-x-4 mt-5">
+                  <button className="text-slate-300 bg-gray-700 p-2 rounded hidden md:block lg:block">{item.titulo}</button>
+                </div>
               </div>
             </div>
           </div>
