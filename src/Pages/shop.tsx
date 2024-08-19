@@ -54,7 +54,7 @@ export default function Shop() {
                 <div className="flex flex-wrap justify-center">
                     {listCat.map((item: any) => (
                         <a key={item.id} href={item.href} className="mx-6 mt-7 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-2xl w-60 h-60 flex items-center justify-center">
-                            <h1 className="text-2xl">{item.title}</h1> 
+                            <h1 className="text-1xl">{item.title}</h1> 
                         </a>
                     ))}
                 </div>

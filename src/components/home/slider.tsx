@@ -122,11 +122,8 @@ export default function SimpleSlider() {
           <div key={item.id}>
             <div className="relative">
               <img src={item.banner} alt="Featured" className="w-full object-cover" />
-              <div className="absolute bottom-8 left-8">
+              <div className="absolute bottom-2 left-8">
                 <h1 className="text-2xl font-bold">{item.titulo}</h1>
-                <div className="flex space-x-4 mt-5">
-                  <button className="bg-gray-700 p-2 rounded">Ver mais</button>
-                </div>
               </div>
             </div>
           </div>
